@@ -21,13 +21,42 @@ This is an MVP (Minimum Viable Product). We'll build core features, but architec
   - **Delete Ideas:** Users can delete their own ideas (with cascade deletion of associated reviews)
   - **Search and Filter:** Users can search ideas by title or description and filter by tags
 - **Review System:** Community value comes from feedback. The review system lets users evaluate and discuss each other's ideas through the review system such as:
-  - Write Reviews: Logged-in users can write reviews for ideas with a 1–5-star rating and text content
-  - View Reviews: All visitors can see reviews on idea detail pages, sorted by date
-  - Edit Reviews: Users can update their own reviews
-  - Delete Reviews: Users can delete their own reviews
-  - Review Constraints: Users can only write one review per idea
-- Content Discovery: A platform is only useful if users can find what they're looking for. Discovery features help surface relevant content:
-  - Idea Listing: Paginated or infinite scroll listing of all ideas
-  - Tag-based filtering: Filter ideas by selecting tags
-  - Real-time search: Search functionality with debounced updates
-  - User Content Views: Users can view all their own ideas and reviews in dedicated pages
+  - **Write Reviews:** Logged-in users can write reviews for ideas with a 1–5-star rating and text content
+  - **View Reviews:** All visitors can see reviews on idea detail pages, sorted by date
+  - **Edit Reviews:** Users can update their own reviews
+  - **Delete Reviews:** Users can delete their own reviews
+  - **Review Constraints:** Users can only write one review per idea
+- **Content Discovery:** A platform is only useful if users can find what they're looking for. Discovery features help surface relevant content:
+  - **Idea Listing:** Paginated or infinite scroll listing of all ideas
+  - **Tag-based filtering:** Filter ideas by selecting tags
+  - **Real-time search:** Search functionality with debounced updates
+  - **User Content Views:** Users can view all their own ideas and reviews in dedicated pages
+
+  ## Non-functional requirements: How it works
+
+- **Performance:** The application must meet modern web performance standards:
+  - Initial page load within 3 seconds on standard broadband
+  - Client-side navigation should feel instant (< 100ms)
+  - Bundle size under 1MB for initial page load
+  - Meet Core Web Vitals thresholds (LCP < 2.5s, FID < 100ms, CLS < 0.1)
+- **Usability:** The application must be user-friendly and intuitive:
+Responsive design that works on devices from 320px to 1920px width
+Touch-friendly interface for mobile devices
+Consistent navigation across all routes
+Clear loading states and skeleton screens during data fetching
+Intuitive form validation with helpful error messages
+- **Accessibility:** The application should be accessible to all users:
+Meet WCAG 2.1 AA accessibility standards
+Keyboard navigation support for all interactive elements
+Proper ARIA labels and semantic HTML
+Minimum color contrast ratio of 4.5:1 for text
+- **Security:** Client-side security measures must be implemented:
+Input validation and sanitization to prevent XSS attacks
+Markdown content sanitization before rendering
+Secure authentication token storage (httpOnly cookies)
+Protection against common web vulnerabilities
+- **Reliability:** The application should handle failures gracefully:
+Network error handling with retry mechanisms
+React error boundaries for component error handling
+Graceful degradation when features are unavailable
+Appropriate fallback content for failed data fetching
