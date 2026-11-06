@@ -40,26 +40,64 @@ This is an MVP (Minimum Viable Product). We'll build core features, but architec
   - Bundle size under 1MB for initial page load
   - Meet Core Web Vitals thresholds (LCP < 2.5s, FID < 100ms, CLS < 0.1)
 - **Usability:** The application must be user-friendly and intuitive:
-Responsive design that works on devices from 320px to 1920px width
-Touch-friendly interface for mobile devices
-Consistent navigation across all routes
-Clear loading states and skeleton screens during data fetching
-Intuitive form validation with helpful error messages
+  - Responsive design that works on devices from 320px to 1920px width
+  - Touch-friendly interface for mobile devices
+  - Consistent navigation across all routes
+  - Clear loading states and skeleton screens during data fetching
+  - Intuitive form validation with helpful error messages
 - **Accessibility:** The application should be accessible to all users:
-Meet WCAG 2.1 AA accessibility standards
-Keyboard navigation support for all interactive elements
-Proper ARIA labels and semantic HTML
-Minimum color contrast ratio of 4.5:1 for text
+  - Meet WCAG 2.1 AA accessibility standards
+  - Keyboard navigation support for all interactive elements
+  - Proper ARIA labels and semantic HTML
+  - Minimum color contrast ratio of 4.5:1 for text
 - **Security:** Client-side security measures must be implemented:
-Input validation and sanitization to prevent XSS attacks
-Markdown content sanitization before rendering
-Secure authentication token storage (httpOnly cookies)
-Protection against common web vulnerabilities
+  - Input validation and sanitization to prevent XSS attacks
+  - Markdown content sanitization before rendering
+  - Secure authentication token storage (httpOnly cookies)
+  - Protection against common web vulnerabilities
 - **Reliability:** The application should handle failures gracefully:
-Network error handling with retry mechanisms
-React error boundaries for component error handling
-Graceful degradation when features are unavailable
-Appropriate fallback content for failed data fetching
+  - Network error handling with retry mechanisms
+  - React error boundaries for component error handling
+  - Graceful degradation when features are unavailable
+  - Appropriate fallback content for failed data fetching
+
+### Data Model
+Our application has three core entities that work together to create the community platform:
+
+**User**
+- id: Unique identifier
+- username: Unique username for the user
+- email: User's email address
+- password: Hashed password for authentication
+- bio: User biography supporting Markdown (optional)
+- createdAt: Timestamp of account creation
+
+**Idea**
+- id: Unique identifier
+- title: The idea's title
+- shortDescription: Brief summary of the idea
+- description: Detailed description with Markdown support
+- tags: Array of tags for categorization
+- authorId: Reference to the user who created it
+- createdAt: Timestamp of creation
+- updatedAt: Timestamp of last update
+
+**Review**
+- id: Unique identifier
+- content: Review text content
+- rating: Star rating (1–5)
+- ideaId: Reference to the idea being reviewed
+- authorId: Reference to the User who wrote the review
+- createdAt: Timestamp of creation
+- updatedAt: Timestamp of last update
+
+The relationships between these entities are as follows:
+
+- A User can create many ideas (one-to-many)
+- A User can write many Reviews (one-to-many)
+- An Idea can have many Reviews (one-to-many)
+- Each Review belongs to one Idea and one User
+- A User can only write one Review per Idea (enforced constraint)
 
 
 ### Links
