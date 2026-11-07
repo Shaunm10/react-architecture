@@ -99,6 +99,70 @@ The relationships between these entities are as follows:
 - Each Review belongs to one Idea and one User
 - A User can only write one Review per Idea (enforced constraint)
 
+## Commands
+
+```Bash
+# Run type checking once (includes React Router type generation)
+npm run typecheck
+
+# Run type checking in watch mode (reruns on file changes)
+npx tsc --watch
+
+# Run type checking for specific files
+npx tsc --noEmit src/features/ideas/api/create-idea.ts
+
+# Run linting on all files
+npm run lint
+
+# Run linting and automatically fix what can be fixed
+npm run lint:fix
+
+# Run linting on specific files or directories
+npx eslint src/features/ideas/
+npx eslint src/components/button.tsx
+
+
+# Run all pre-commit checks (linting, formatting, type checking)
+npm run pre-commit
+
+# Run only lint-staged (checks only changed files)
+npm run lint-staged
+
+# Run individual checks
+npm run lint
+npm run format
+npm run typecheck
+```
+
+## Project Structure
+
+### src
+```
+src/
+├── app/              # Core application setup and entry points
+├── components/       # Reusable UI components (not feature-specific)
+├── config/           # Configuration files
+├── features/         # Feature-based modules
+│   ├── auth/        # Authentication feature
+│   ├── ideas/       # Ideas management feature
+│   ├── profile/     # User profile feature
+│   └── reviews/     # Reviews feature
+├── hooks/           # Custom React hooks (shared across features)
+├── lib/             # Utility functions and third-party integrations
+├── stores/          # Global state management
+├── types/           # TypeScript type definitions
+```
+
+### individual feature
+```
+features/ideas/
+├── api/              # API calls for this feature
+├── components/       # Feature-specific components
+├── config/           # Feature configuration (query keys, etc.)
+├── hooks/            # Feature-specific hooks
+└── locales/          # Internationalization for this feature
+```
+
 
 ### Links
 https://learning-oreilly-com.library.access.arlingtonva.us/library/view/react-application-architecture/9781836202974/Chapter_1.xhtml#h2_36
