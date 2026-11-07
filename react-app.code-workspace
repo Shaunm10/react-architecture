@@ -1,11 +1,22 @@
 {
 	"folders": [
 		{
+			"name": "root (README, git)",
 			"path": "."
 		},
 		{
-			"path": "../api"
+			"name": "react-app",
+			"path": "react-app"
+		},
+		{
+			"name": "api",
+			"path": "api"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"files.exclude": {
+			"react-app": true,
+			"api": true
+		}
+	}
 }
