@@ -1,2 +1,8 @@
-api/node_modules/
-src/node_modules/
+.DS_Store
+.env
+node_modules/
+
+
+# React Router
+/.react-router/
+build/
