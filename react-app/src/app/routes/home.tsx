@@ -1,3 +1,4 @@
+import Counter from '../components/counter';
 import { Welcome } from '../welcome/welcome';
 
 export function meta() {
@@ -8,5 +9,10 @@ export function meta() {
 }
 
 export default function Home() {
-  return <Welcome />;
+  return (
+    <>
+      <Welcome />
+      <Counter label="Click Counter" initialValue={69} />
+    </>
+  );
 }
