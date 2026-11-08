@@ -132,6 +132,9 @@ npm run lint-staged
 npm run lint
 npm run format
 npm run typecheck
+
+# Add additional shadcn components
+npx shadcn@latest add button card
 ```
 
 ## Project Structure
@@ -165,7 +168,7 @@ features/ideas/
 
 
 ### Links
-https://learning-oreilly-com.library.access.arlingtonva.us/library/view/react-application-architecture/9781836202974/Chapter_1.xhtml#h2_36
+https://learning-oreilly-com.library.access.arlingtonva.us/library/view/react-application-architecture/9781836202974/Chapter_3.xhtml#h1_129
 
 https://github.com/PacktPublishing/React-Application-Architecture-for-Production-Second-Edition.git
 
