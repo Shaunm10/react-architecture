@@ -168,3 +168,5 @@ features/ideas/
 https://learning-oreilly-com.library.access.arlingtonva.us/library/view/react-application-architecture/9781836202974/Chapter_1.xhtml#h2_36
 
 https://github.com/PacktPublishing/React-Application-Architecture-for-Production-Second-Edition.git
+
+https://ui.shadcn.com/
