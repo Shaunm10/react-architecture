@@ -135,6 +135,9 @@ npm run typecheck
 
 # Add additional shadcn components
 npx shadcn@latest add button card
+
+#install and configure storybook
+npm create storybook@latest
 ```
 
 ## Project Structure
@@ -173,3 +176,5 @@ https://learning-oreilly-com.library.access.arlingtonva.us/library/view/react-ap
 https://github.com/PacktPublishing/React-Application-Architecture-for-Production-Second-Edition.git
 
 https://ui.shadcn.com/
+
+https://storybook.js.org/docs/writing-tests/visual-testing
