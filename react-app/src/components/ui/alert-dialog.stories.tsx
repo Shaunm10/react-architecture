@@ -52,3 +52,28 @@ export const Default: Story = {
     </AlertDialog>
   ),
 };
+
+export const Destructive: Story = {
+  render: () => (
+    <AlertDialog>
+      <AlertDialogTrigger
+        render={<Button variant="destructive">Delete Account</Button>}
+      />
+      <AlertDialogContent>
+        <AlertDialogHeader>
+          <AlertDialogTitle>Delete Account</AlertDialogTitle>
+          <AlertDialogDescription>
+            Are you sure you want to delete your account? All of your data will
+            be permanently removed. This action cannot be undone.
+          </AlertDialogDescription>
+        </AlertDialogHeader>
+        <AlertDialogFooter>
+          <AlertDialogCancel>Cancel</AlertDialogCancel>
+          <AlertDialogAction variant="destructive">
+            Delete Account
+          </AlertDialogAction>
+        </AlertDialogFooter>
+      </AlertDialogContent>
+    </AlertDialog>
+  ),
+};
