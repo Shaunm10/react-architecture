@@ -1,0 +1,54 @@
+import type { Meta, StoryObj } from '@storybook/react-vite';
+
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogFooter,
+  AlertDialogTrigger,
+} from './alert-dialog';
+import {
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogHeader,
+  AlertDialogTitle,
+} from './alert-dialog';
+import { Button } from './button';
+
+const meta = {
+  title: 'UI/AlertDialog',
+  component: AlertDialog,
+  parameters: {
+    layout: 'centered',
+  },
+  tags: ['autodocs'],
+} satisfies Meta<typeof AlertDialog>;
+
+export default meta;
+type Story = StoryObj<typeof meta>;
+
+/**
+ * The name of each of these becomes an example.
+ */
+export const Default: Story = {
+  render: () => (
+    <AlertDialog>
+      <AlertDialogTrigger
+        render={<Button variant="outline">Show Dialog</Button>}
+      />
+      <AlertDialogContent>
+        <AlertDialogHeader>
+          <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
+          <AlertDialogDescription>
+            This action cannot be undone. This will permanently delete your
+            account and remove your data from our servers.
+          </AlertDialogDescription>
+        </AlertDialogHeader>
+        <AlertDialogFooter>
+          <AlertDialogCancel>Cancel</AlertDialogCancel>
+          <AlertDialogAction>Continue</AlertDialogAction>
+        </AlertDialogFooter>
+      </AlertDialogContent>
+    </AlertDialog>
+  ),
+};
