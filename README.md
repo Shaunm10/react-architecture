@@ -132,6 +132,12 @@ npm run lint-staged
 npm run lint
 npm run format
 npm run typecheck
+
+# Add additional shadcn components
+npx shadcn@latest add button card
+
+#install and configure storybook
+npm create storybook@latest
 ```
 
 ## Project Structure
@@ -165,6 +171,11 @@ features/ideas/
 
 
 ### Links
-https://learning-oreilly-com.library.access.arlingtonva.us/library/view/react-application-architecture/9781836202974/Chapter_1.xhtml#h2_36
+https://learning-oreilly-com.library.access.arlingtonva.us/library/view/react-application-architecture/9781836202974/Chapter_4.xhtml
+
 
 https://github.com/PacktPublishing/React-Application-Architecture-for-Production-Second-Edition.git
+
+https://ui.shadcn.com/
+
+https://storybook.js.org/docs/writing-tests/visual-testing

@@ -1,3 +1,5 @@
+// For more info, see https://github.com/storybookjs/eslint-plugin-storybook#configuration-flat-config-format
+
 import js from '@eslint/js';
 import typescript from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
@@ -8,6 +10,7 @@ import importPlugin from 'eslint-plugin-import';
 import prettier from 'eslint-plugin-prettier';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
+import storybook from 'eslint-plugin-storybook';
 import globals from 'globals';
 
 import { importRules } from './infra/eslint-import-rules.js';
@@ -108,4 +111,12 @@ export default defineConfig([
       },
     },
   },
+  {
+    files: ['src/stories/**'],
+    rules: {
+      'check-file/filename-naming-convention': 'off',
+      'react/no-unescaped-entities': 'off',
+    },
+  },
+  ...storybook.configs['flat/recommended'],
 ]);

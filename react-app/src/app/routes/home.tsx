@@ -1,6 +1,8 @@
 import Counter from '../components/counter';
 import { Welcome } from '../welcome/welcome';
 
+import Components from './components';
+
 export function meta() {
   return [
     { title: 'New React Router App' },
@@ -13,6 +15,7 @@ export default function Home() {
     <>
       <Welcome />
       <Counter label="Click Counter" initialValue={69} />
+      <Components />
     </>
   );
 }
