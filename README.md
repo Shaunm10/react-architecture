@@ -138,6 +138,9 @@ npx shadcn@latest add button card
 
 #install and configure storybook
 npm create storybook@latest
+
+# Generate client side type
+npm run generate:openapi
 ```
 
 ## Project Structure
@@ -171,11 +174,14 @@ features/ideas/
 
 
 ### Links
-https://learning-oreilly-com.library.access.arlingtonva.us/library/view/react-application-architecture/9781836202974/Chapter_4.xhtml
 
+ 
+- [Arlington book Url](https://learning-oreilly-com.library.access.arlingtonva.us/library/view/react-application-architecture/9781836202974/Chapter_5.xhtml#h2_172)
 
-https://github.com/PacktPublishing/React-Application-Architecture-for-Production-Second-Edition.git
+- [Author's Repository](https://github.com/PacktPublishing/React-Application-Architecture-for-Production-Second-Edition.git)
 
-https://ui.shadcn.com/
+- [Shadcn documentation](https://ui.shadcn.com/)
 
-https://storybook.js.org/docs/writing-tests/visual-testing
+- [StoryBook documentation](https://storybook.js.org/docs/writing-tests/visual-testing)
+
+- [Api Project Local OpenApi Schema doc](http://localhost:9999/doc)
